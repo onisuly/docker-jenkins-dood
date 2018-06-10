@@ -8,7 +8,7 @@ This Dockerfile build an image for [Jenkins](https://jenkins.io/) with capabilit
 ```shell
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins --restart=always \
 -v $(which docker):/usr/bin/docker \
--v /var/run/docker.sock:/var/run/docker.sock onisuly/jenkins-dood
+-v /var/run/docker.sock:/var/run/docker.sock onisuly/docker-jenkins-dood
 ```
 
 NOTE: read below the _build executors_ part for the role of the `50000` port mapping.
@@ -20,7 +20,7 @@ You will probably want to make that an explicit volume so you can manage it and 
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins --restart=always \
 -v /path/to/your/jenkins_home:/var/jenkins_home \
 -v $(which docker):/usr/bin/docker \
--v /var/run/docker.sock:/var/run/docker.sock onisuly/jenkins-dood
+-v /var/run/docker.sock:/var/run/docker.sock onisuly/docker-jenkins-dood
 ```
 
 this will automatically create a 'jenkins_home' [docker volume](https://docs.docker.com/storage/volumes/) on the host machine, that will survive the container stop/restart/deletion.
