@@ -1,4 +1,7 @@
 # Jenkins with DooD (Docker outside of Docker)
+
+[![Docker Build Status](https://img.shields.io/docker/build/onisuly/docker-jenkins-dood.svg)](https://github.com/onisuly/docker-jenkins-dood) [![Docker Automated build](https://img.shields.io/docker/automated/onisuly/docker-jenkins-dood.svg)](https://github.com/onisuly/docker-jenkins-dood) [![Docker Stars](https://img.shields.io/docker/stars/onisuly/docker-jenkins-dood.svg)](https://github.com/onisuly/docker-jenkins-dood) [![Docker Pulls](https://img.shields.io/docker/pulls/onisuly/docker-jenkins-dood.svg)](https://github.com/onisuly/docker-jenkins-dood)
+
 This Dockerfile build an image for [Jenkins](https://jenkins.io/) with capabilities of using Docker outside of Docker.
 
 ![Jenkins](https://github.com/onisuly/docker-jenkins-dood/raw/master/images/jenkins-dood.png "Jenkins")  
