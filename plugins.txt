@@ -1,2 +1,3 @@
 role-strategy:latest
 nodejs:latest
+embeddable-build-status:latest
