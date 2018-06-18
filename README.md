@@ -1,6 +1,6 @@
 # Jenkins with DooD (Docker outside of Docker)
 
-[![Docker Build Status](https://img.shields.io/docker/build/onisuly/docker-jenkins-dood.svg)](https://github.com/onisuly/docker-jenkins-dood) [![Docker Automated build](https://img.shields.io/docker/automated/onisuly/docker-jenkins-dood.svg)](https://github.com/onisuly/docker-jenkins-dood) [![Docker Stars](https://img.shields.io/docker/stars/onisuly/docker-jenkins-dood.svg)](https://github.com/onisuly/docker-jenkins-dood) [![Docker Pulls](https://img.shields.io/docker/pulls/onisuly/docker-jenkins-dood.svg)](https://github.com/onisuly/docker-jenkins-dood)
+[![Docker Build Status](https://img.shields.io/docker/build/onisuly/jenkins-dood.svg)](https://github.com/onisuly/jenkins-dood) [![Docker Automated build](https://img.shields.io/docker/automated/onisuly/jenkins-dood.svg)](https://github.com/onisuly/jenkins-dood) [![Docker Stars](https://img.shields.io/docker/stars/onisuly/jenkins-dood.svg)](https://github.com/onisuly/jenkins-dood) [![Docker Pulls](https://img.shields.io/docker/pulls/onisuly/jenkins-dood.svg)](https://github.com/onisuly/jenkins-dood)
 
 This Dockerfile build an image for [Jenkins](https://jenkins.io/) with capabilities of using Docker outside of Docker.
 
@@ -11,7 +11,7 @@ This Dockerfile build an image for [Jenkins](https://jenkins.io/) with capabilit
 ```shell
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins --restart=always \
 -v $(which docker):/usr/bin/docker \
--v /var/run/docker.sock:/var/run/docker.sock onisuly/docker-jenkins-dood
+-v /var/run/docker.sock:/var/run/docker.sock onisuly/jenkins-dood
 ```
 
 NOTE: read below the _build executors_ part for the role of the `50000` port mapping.
@@ -23,7 +23,7 @@ You will probably want to make that an explicit volume so you can manage it and 
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins --restart=always \
 -v /path/to/your/jenkins_home:/var/jenkins_home \
 -v $(which docker):/usr/bin/docker \
--v /var/run/docker.sock:/var/run/docker.sock onisuly/docker-jenkins-dood
+-v /var/run/docker.sock:/var/run/docker.sock onisuly/jenkins-dood
 ```
 
 this will automatically create a 'jenkins_home' [docker volume](https://docs.docker.com/storage/volumes/) on the host machine, that will survive the container stop/restart/deletion.
